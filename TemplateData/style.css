@@ -1,5 +1,10 @@
 body { padding: 0; margin: 0 }
-#unity-container.unity-desktop { left: 50%; top: 50%; transform: translate(-50%, -50%) }
+#unity-container.unity-desktop {
+  left: 50%;
+  top: auto;
+  transform: translateX(-50%);
+}
+
 #unity-container.unity-mobile { position: fixed; width: 100%; height: 100% }
 html, body {
   margin: 0; 
@@ -14,8 +19,12 @@ html, body {
 }
 
 #unity-container {
-  /* Make sure container is sized by canvas */
-  position: relative;
+  width: 1280px;   /* match your canvas width */
+  height: 720px;   /* match your canvas height */
+  margin: 0 auto;  /* center horizontally */
+  position: relative; /* so it stays normal flow */
+  top: 0;          /* reset vertical offset */
+  transform: none; /* remove any translate if exists */
 }
 
 #unity-canvas {
