@@ -2,24 +2,25 @@ body { padding: 0; margin: 0 }
 #unity-container.unity-desktop { left: 50%; top: 50%; transform: translate(-50%, -50%) }
 #unity-container.unity-mobile { position: fixed; width: 100%; height: 100% }
 html, body {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+  margin: 0; 
+  padding: 0; 
   height: 100%;
-  background: black;
-}
-#unity-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-#unity-canvas {
   width: 100%;
-  height: auto;
-  max-height: 100vh;
-  max-width: 100vw;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;  /* centers horizontally */
+  align-items: center;      /* centers vertically */
+  background: black;        /* optional, for black bars */
+}
+
+#unity-container {
+  /* Make sure container is sized by canvas */
+  position: relative;
+}
+
+#unity-canvas {
   display: block;
+  /* no position needed here, flex centers it */
 }
 .unity-mobile #unity-canvas { width: 100%; height: 100% }
 #unity-loading-bar { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: none }
