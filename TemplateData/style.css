@@ -1,29 +1,14 @@
-html, body {
-  margin: 0; padding: 0; height: 100%; width: 100%;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: black;
-}
-
 #unity-container {
-  /* Set fixed original size */
-  width: 2560px;
-  height: 1440px;
-
-  /* Scale down */
   transform: scale(0.75);
   transform-origin: top left;
+  width: 2560px;
+  height: 1440px;
+}
 
-  /* Make sure container does not cause scroll */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-
-  /* Offset by half scaled width/height */
-  margin-left: calc(-2560px * 0.75 / 2);
-  margin-top: calc(-1440px * 0.75 / 2);
+html, body {
+  margin: 0; padding: 0; overflow: hidden;
+  width: 100vw;
+  height: 100vh;
 }
 
 #unity-canvas {
