@@ -1,25 +1,18 @@
-body { padding: 0; margin: 0 }
 html, body {
-  margin: 0;
-  padding: 0;
-  width: 133.33%; /* 100% / 0.75 to compensate for scale */
-  height: 133.33%;
+  margin: 0; padding: 0; height: 100%; width: 100%;
   overflow: hidden;
-  background: black;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: scale(0.75);
-  transform-origin: top left;
-  overflow-x: hidden; /* avoid horizontal scroll */
+  justify-content: center;  /* center horizontally */
+  align-items: center;      /* center vertically */
+  background: black;        /* optional */
 }
 
 #unity-container {
+  position: relative;
+  width: 3413px;   /* 2560 / 0.75 */
+  height: 1920px;  /* 1440 / 0.75 */
   transform: scale(0.75);
   transform-origin: top left;
-  width: 3413px; /* 2560 / 0.75 */
-  height: 1920px; /* 1440 / 0.75 */
-  overflow: hidden;
 }
 
 #unity-canvas {
