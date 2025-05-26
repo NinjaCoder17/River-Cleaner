@@ -2,17 +2,28 @@ html, body {
   margin: 0; padding: 0; height: 100%; width: 100%;
   overflow: hidden;
   display: flex;
-  justify-content: center;  /* center horizontally */
-  align-items: center;      /* center vertically */
-  background: black;        /* optional */
+  justify-content: center;
+  align-items: center;
+  background: black;
 }
 
 #unity-container {
-  position: relative;
-  width: 3413px;   /* 2560 / 0.75 */
-  height: 1920px;  /* 1440 / 0.75 */
+  /* Set fixed original size */
+  width: 2560px;
+  height: 1440px;
+
+  /* Scale down */
   transform: scale(0.75);
   transform-origin: top left;
+
+  /* Make sure container does not cause scroll */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  /* Offset by half scaled width/height */
+  margin-left: calc(-2560px * 0.75 / 2);
+  margin-top: calc(-1440px * 0.75 / 2);
 }
 
 #unity-canvas {
