@@ -100,15 +100,6 @@
       };
       document.body.appendChild(script);
 
-      const scale = 0.75;
-      const canvas = document.getElementById("unity-canvas");
-      canvas.width = 2560 * scale;  // sets actual resolution
-      canvas.height = 1440 * scale;
-      
-      const container = document.getElementById("unity-container");
-      container.style.width = (2560 * scale) + "px";
-      container.style.height = (1440 * scale) + "px";
-      container.style.transform = "none";  // no scaling needed now
 
       function resizeCanvasToAspect() {
         const aspectRatio = 16 / 9;
