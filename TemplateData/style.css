@@ -4,9 +4,13 @@
 }
 
 html, body {
-  margin: 0; padding: 0; overflow: hidden;
-  width: 100vw;
-  height: 100vh;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Horizontal centering */
+  align-items: center;     /* Vertical centering */
+  background: #000;        /* Optional: Background color */
 }
 
 #unity-canvas {
