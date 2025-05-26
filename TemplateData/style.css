@@ -1,7 +1,5 @@
 #unity-container {
-  zoom: 75%;
-  transform: scale(0.75);
-  transform-origin: top left;
+  zoom: 0.75;
   width: 2560px;
   height: 1440px;
 }
