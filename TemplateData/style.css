@@ -4,23 +4,25 @@ html, body {
   padding: 0;
   width: 100%;
   height: 100%;
+  overflow: hidden;
   background: black;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
 }
 
 #unity-container {
-  width: 2560px;
-  height: 1440px;
+  width: 100%;
+  max-width: 2560px;
+  aspect-ratio: 16 / 9;
   position: relative;
 }
 
 #unity-canvas {
-  height: 2560px;
-  width: 1440px;
-  aspect-ratio: 16 / 9;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: #231F20; /* optional */
 }
 
 #unity-loading-bar { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: none }
