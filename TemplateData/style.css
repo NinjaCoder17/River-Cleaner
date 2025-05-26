@@ -18,8 +18,8 @@ html, body {
 }
 
 #unity-canvas {
-  height: 50%;
-  width: auto;
+  height: 2560px;
+  width: 1440px;
   aspect-ratio: 16 / 9;
 }
 
