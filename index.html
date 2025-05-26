@@ -99,6 +99,26 @@
         });
       };
       document.body.appendChild(script);
+
+      function resizeCanvasToAspect() {
+        const aspectRatio = 16 / 9;
+        let width = window.innerWidth;
+        let height = window.innerHeight;
+      
+        if (width / height > aspectRatio) {
+          width = height * aspectRatio;
+        } else {
+          height = width / aspectRatio;
+        }
+      
+        const canvas = document.getElementById("unity-canvas");
+        canvas.style.width = width + "px";
+        canvas.style.height = height + "px";
+      }
+      
+      window.addEventListener("resize", resizeCanvasToAspect);
+      resizeCanvasToAspect();
+
     </script>
   </body>
 </html>
