@@ -18,9 +18,9 @@ html, body {
 }
 
 #unity-canvas {
-  width: 2560px;
-  height: 1440px;
-  background: #231F20;
+  height: 50%;
+  width: auto;
+  aspect-ratio: 16 / 9;
 }
 
 #unity-loading-bar { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: none }
