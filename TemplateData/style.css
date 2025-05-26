@@ -12,10 +12,13 @@ html, body {
 }
 
 #unity-container {
-  width: 100%;
-  max-width: 2560px;
-  aspect-ratio: 16 / 9;
-  position: relative;
+  transform: scale(0.75);
+  transform-origin: top left;
+  width: 2560px;
+  height: 1440px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 #unity-canvas {
