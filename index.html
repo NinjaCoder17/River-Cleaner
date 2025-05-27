@@ -101,28 +101,34 @@
       document.body.appendChild(script);
 
 
-      function resizeCanvasToAspect() {
-        const aspectRatio = 16 / 9;
-        let width = window.innerWidth;
-        let height = window.innerHeight;
-      
-        if (width / height > aspectRatio) {
-          width = height * aspectRatio;
-        } else {
-          height = width / aspectRatio;
+      function resizeUnityContainer() {
+          const container = document.getElementById("unity-container");
+          const vw = window.innerWidth;
+          const vh = window.innerHeight;
+        
+          let width = vw;
+          let height = vw * 9 / 16;
+        
+          if (height > vh) {
+            // Height is bigger than viewport height, adjust based on height instead
+            height = vh;
+            width = vh * 16 / 9;
+          }
+        
+          width = Math.min(width, 2560);
+          height = Math.min(height, 1440);
+        
+          container.style.width = width + "px";
+          container.style.height = height + "px";
+        
+          // Canvas fills container exactly
+          const canvas = document.getElementById("unity-canvas");
+          canvas.style.width = "100%";
+          canvas.style.height = "100%";
         }
-      
-        const container = document.getElementById("unity-container");
-        container.style.width = width + "px";
-        container.style.height = height + "px";
-      
-        const canvas = document.getElementById("unity-canvas");
-        canvas.style.width = "100%";
-        canvas.style.height = "100%";
-      }
-      
-      window.addEventListener("resize", resizeCanvasToAspect);
-      resizeCanvasToAspect();
+        
+        window.addEventListener("resize", resizeUnityContainer);
+        resizeUnityContainer();
 
     </script>
   </body>
