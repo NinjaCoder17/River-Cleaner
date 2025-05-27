@@ -117,11 +117,7 @@
         canvas.style.height = height + "px";
       }
       
-      window.addEventListener("resize", () => {
-        // This makes sure the canvas stays within bounds
-        canvas.style.width = "100%";
-        canvas.style.height = "auto";
-      });
+      window.addEventListener("resize", resizeCanvasToAspect);
       resizeCanvasToAspect();
 
     </script>
