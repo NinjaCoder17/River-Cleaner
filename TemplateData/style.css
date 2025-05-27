@@ -1,28 +1,27 @@
 html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
+    margin: 0; padding: 0;
+    height: 100%; width: 100%;
     display: flex;
-    justify-content: center; /* center horizontally */
-    align-items: center;     /* center vertically */
-    background-color: #222;  /* optional */
+    justify-content: center; /* horizontal center */
+    align-items: center;     /* vertical center */
+    background-color: #222;
+    overflow: hidden; /* hide scrollbars */
   }
 
   #unity-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100vw;        /* fill full viewport width */
+    height: calc(100vw * 9 / 16); /* height based on 16:9 ratio */
+    max-width: 2560px;   /* max original width */
+    max-height: 1440px;  /* max original height */
+    background-color: black;
+    box-sizing: border-box;
     position: relative;
-    /* Optional: set a max size if needed */
-    max-width: 100%;
-    max-height: 100%;
   }
 
   #unity-canvas {
+    width: 100% !important;
+    height: 100% !important;
     display: block;
-    max-width: 100%;
-    max-height: 100%;
   }
 
 #unity-loading-bar { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: none }
