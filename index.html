@@ -112,9 +112,13 @@
           height = width / aspectRatio;
         }
       
+        const container = document.getElementById("unity-container");
+        container.style.width = width + "px";
+        container.style.height = height + "px";
+      
         const canvas = document.getElementById("unity-canvas");
-        canvas.style.width = width + "px";
-        canvas.style.height = height + "px";
+        canvas.style.width = "100%";
+        canvas.style.height = "100%";
       }
       
       window.addEventListener("resize", resizeCanvasToAspect);
